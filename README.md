@@ -1,2 +1,2 @@
-# gryphhacks2023
+Gryphacks 2023 project.
 test
