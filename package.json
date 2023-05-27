@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "openai": "^3.2.1"
-  }
+  },
+  "name": "gryphhacks2023",
+  "description": "Gryphacks 2023 project.",
+  "version": "1.0.0",
+  "main": "ResponseGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
 }
