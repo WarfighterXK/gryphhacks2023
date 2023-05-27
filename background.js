@@ -30,24 +30,37 @@ import {Configuration, OpenAIApi} from './node_modules/openai/index.ts'
 
 
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-const response = openai.createCompletion({
-  model: "gpt-3.5-turbo",
-  prompt: "Say this is a test.",
-  temperature: 0,
-  max_tokens: 7,
-});
+API
 
-var defResponse = "Default response"
-// export {defResponse}
-console.log('testyy')
 
-localStorage.setItem("defResponse", defResponse)
 
-console.log(response.data.choices[0].text)
+
+
+
+
+
+
+
+
+
+//const configuration = new Configuration({
+//  apiKey: process.env.OPENAI_API_KEY,
+//});
+//const openai = new OpenAIApi(configuration);
+//const response = openai.createCompletion({
+//  model: "gpt-3.5-turbo",
+//  prompt: "Say this is a test.",
+//  temperature: 0,
+//  max_tokens: 7,
+//});
+//
+//var defResponse = "Default response"
+//// export {defResponse}
+//console.log('testyy')
+//
+//localStorage.setItem("defResponse", defResponse)
+//
+//console.log(response.data.choices[0].text)
 
 
 

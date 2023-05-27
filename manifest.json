@@ -4,7 +4,19 @@
   "description": "An extension that helps users stay focused.",
   "manifest_version": 3,
   "author": "WarfighterXK, ., and off.",
-  "icons": {},
+  "icons": {
+    "16": "/images/16.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "page_action": {
+    "default_icon": {
+      "16": "/images/16.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
+  },
+
   "action": {
     "default_popup": "popup/popup.html"
   },
