@@ -20,7 +20,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-async function getResponse() {
+export async function getResponse() {
   return await openai.createCompletion({
     model: "gpt-3.5-turbo",
     prompt: "Say this is a test and tell me who Scottie Barnes is.",

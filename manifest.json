@@ -4,19 +4,7 @@
   "description": "An extension that helps users stay focused.",
   "manifest_version": 3,
   "author": "WarfighterXK, ., and off.",
-  "icons": {
-    "16": "/images/16.png",
-    "48": "/images/48.png",
-    "128": "/images/128.png"
-  },
-  "page_action": {
-    "default_icon": {
-      "16": "/images/16.png",
-      "48": "/images/48.png",
-      "128": "/images/128.png"
-    }
-  },
-
+  "icons": {},
   "action": {
     "default_popup": "popup/popup.html"
   },
@@ -28,8 +16,7 @@
     }
   ],
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
+    "service_worker": "background.js"
   },
   "minimum_chrome_version": "92"
 }
