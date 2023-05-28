@@ -35,8 +35,9 @@ var tabTitles = []
 //   )
 
 function updateTitles() {
-chrome.tabs.query({}, (tabs)=>{tabs.forEach(tab => {
-    tabTitles = []
+chrome.tabs.query({}, (tabs)=>{tabTitles = []
+    tabs.forEach(tab => {
+
     tabTitles.push(tab.title)
     console.log("Got existing tab titles.")
     console.log(tabTitles)
