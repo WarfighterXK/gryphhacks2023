@@ -31,17 +31,26 @@ var tabTitles = []
 //     (tab) => {tabTitles.splice(tabTitles.indexOf(tab.title))
 //         console.log("Tab closed.")
 //     console.log(tabTitles)}
-    
+
 //   )
 
 function updateTitles() {
-chrome.tabs.query({}, (tabs)=>{tabTitles = []
+  chrome.tabs.query({}, tabs => {
+    tabTitles = []
     tabs.forEach(tab => {
-
-    tabTitles.push(tab.title)
-    console.log("Got existing tab titles.")
-    console.log(tabTitles)
-});})}
+      tabTitles.push(tab.title)
+      console.log("Retrieved tab titles.")
+      // console.log(tabTitles)
+    })
+  })
+  async function sendMessage() {
+    const response = await chrome.runtime.sendMessage({
+      data: tabTitles
+    })
+    console.log(response)
+  }
+  sendMessage()
+}
 
 // Another alternate approach
 // chrome.runtime.onMessage.addListener(
@@ -55,12 +64,10 @@ chrome.tabs.query({}, (tabs)=>{tabTitles = []
 //         }
 //     })
 
-
 // ANOTHER ALTERNATE APPROACH!
-chrome.tabs.onUpdated.addListener(
-    (tab) => {updateTitles()}
-  )
-
+chrome.tabs.onUpdated.addListener(tab => {
+  updateTitles()
+})
 
 // try {
 //     importScripts('./node_modules/openai.index.ts' /*, and so on */);
@@ -83,7 +90,6 @@ chrome.tabs.onUpdated.addListener(
 
 // const { Configuration, OpenAIApi } = require("openai");
 
-
 // const configuration = new Configuration({
 //   apiKey: process.env.OPENAI_API_KEY,
 // });
@@ -100,7 +106,3 @@ chrome.tabs.onUpdated.addListener(
 // localStorage.setItem("defResponse", defResponse)
 
 // console.log(response.data.choices[0].text)
-
-
-
-
