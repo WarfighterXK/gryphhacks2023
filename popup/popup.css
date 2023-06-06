@@ -1,0 +1,18 @@
+
+*{  
+    padding: 2px;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.info h1{
+    color: green;
+    padding: 2px;
+    
+
+
+}
